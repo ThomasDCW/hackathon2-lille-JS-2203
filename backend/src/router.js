@@ -7,6 +7,7 @@ const {
   CategoryController,
   ProjectResultController,
   ProjectLifeController,
+  UserController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -23,5 +24,6 @@ router.post("/projects", ProjectController.add);
 router.get("/projectresults", ProjectResultController.browse);
 router.get("/categories", CategoryController.browse);
 router.get("/projectsteps", ProjectLifeController.browse);
+router.get("/users/:id", UserController.read);
 
 module.exports = router;

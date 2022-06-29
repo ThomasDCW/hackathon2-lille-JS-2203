@@ -3,7 +3,7 @@ const models = require("../models");
 class ProjectController {
   static browse = (req, res) => {
     models.project
-      .findAll()
+      .findAllInfo()
       .then(([rows]) => {
         res.send(rows);
       })
