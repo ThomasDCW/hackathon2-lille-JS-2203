@@ -4,10 +4,11 @@ import Form from "@pages/Form";
 import Profil from "@pages/Profil";
 import ProjectCard from "@components/ProjectCard";
 import { Routes, Route } from "react-router-dom";
+import SGlobal from "./style";
 
 function App() {
   return (
-    <div className="App">
+    <SGlobal>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/accueil" element={<Home />} />
@@ -15,7 +16,7 @@ function App() {
         <Route path="/perso" element={<Profil />} />
         <Route path="/projets" element={<ProjectCard />} />
       </Routes>
-    </div>
+    </SGlobal>
   );
 }
 
