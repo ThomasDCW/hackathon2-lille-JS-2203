@@ -6,7 +6,7 @@ import SHome from "./style";
 
 export default function Home() {
   const [active, setActive] = useState(true);
-  const [setSkills] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [categories, setCategories] = useState([]);
   // const [projectState, setProjectState] = useState([]);
   const makeQuestSubmit = () => {
@@ -26,8 +26,6 @@ export default function Home() {
     axios.get(`http://localhost:5000/skills`).then(({ data }) => {
       setSkills(data);
     });
-  }, []);
-  useEffect(() => {
     axios.get(`http://localhost:5000/categories`).then(({ data }) => {
       setCategories(data);
     });
@@ -38,6 +36,9 @@ export default function Home() {
       <Header />
       <main>
         <div className="list">
+          {skills.map((skill) => {
+            return <div className="jeton">{skill.name}</div>;
+          })}
           {categories.map((categorie) => {
             return <div className="jeton">{categorie.name}</div>;
           })}
