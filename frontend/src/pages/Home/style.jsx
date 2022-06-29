@@ -7,11 +7,14 @@ export default styled.div`
     background-color: rgb(240, 240, 240);
     margin: auto;
     margin-top: 1rem;
-    height: 50vh;
+    height: 70vh;
     padding: 1rem;
+    overflow: scroll;
   }
   .list {
     display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
   }
   .button {
     background-color: var(--color-orange);
@@ -21,11 +24,17 @@ export default styled.div`
   }
   .jeton {
     background-color: var(--color-blue);
-    border: 1px solid red;
+    border: 5px solid #e89759;
     margin: 1rem;
     border-radius: 50%;
     padding: 0.9rem;
     color: white;
-    width: 4rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
   }
 `;
