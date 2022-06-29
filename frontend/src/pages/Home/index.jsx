@@ -1,10 +1,14 @@
 import Header from "@components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Result from "@components/Result";
+import axios from "axios";
 import SHome from "./style";
 
 export default function Home() {
   const [active, setActive] = useState(true);
+  const [setSkills] = useState([]);
+  const [categories, setCategories] = useState([]);
+  // const [projectState, setProjectState] = useState([]);
   const makeQuestSubmit = () => {
     // const allTags = Object.keys(formData); // Object.keys() gets all keys of an object and puts it into an array
     // const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
@@ -17,11 +21,27 @@ export default function Home() {
     // setQuerySent(query);
     setActive(!active);
   };
+
+  useEffect(() => {
+    axios.get(`http://localhost:5000/skills`).then(({ data }) => {
+      setSkills(data);
+    });
+  }, []);
+  useEffect(() => {
+    axios.get(`http://localhost:5000/categories`).then(({ data }) => {
+      setCategories(data);
+    });
+  }, []);
+
   return (
     <SHome>
       <Header />
       <main>
-        Main contener
+        <div className="list">
+          {categories.map((categorie) => {
+            return <div className="jeton">{categorie.name}</div>;
+          })}
+        </div>
         <div className="buttonResults">
           <button
             type="button"
