@@ -12,7 +12,10 @@ export default function ProjectCard() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
             cumque dolore officia qui quam, vitae magnam deleniti rem ea
             cupiditate exercitationem consectetur alias quaerat! Tempore odio
-            possimus obcaecati nesciunt repellat.
+            possimus obcaecati nesciunt repellat. Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Excepturi cumque dolore officia qui
+            quam, vitae magnam deleniti rem ea cupiditate exercitationem
+            consectetur alias quaerat! Tempore odio possimus obcaecati nesciunt
           </p>
         </article>
       </div>
