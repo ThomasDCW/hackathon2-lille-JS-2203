@@ -1,5 +1,5 @@
 import FormLogin from "@components/FormLogin";
-import Header from "@components/Header";
+import Header from "@components/HeaderLogin";
 import login from "@assets/login/login.png";
 import SLogin from "./style";
 
