@@ -1,7 +1,7 @@
 const AbstractManager = require("./AbstractManager");
 
-class ItemManager extends AbstractManager {
+class UserManager extends AbstractManager {
   static table = "user";
 }
 
-module.exports = ItemManager;
+module.exports = UserManager;
