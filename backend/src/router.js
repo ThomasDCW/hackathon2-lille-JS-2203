@@ -5,6 +5,8 @@ const {
   SkillController,
   ProjectController,
   CategoryController,
+  ProjectResultController,
+  ProjectLifeController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -18,6 +20,8 @@ router.delete("/items/:id", ItemController.delete);
 router.get("/skills", SkillController.browse);
 router.get("/projects", ProjectController.browse);
 router.post("/projects", ProjectController.add);
+router.get("/projectresults", ProjectResultController.browse);
 router.get("/categories", CategoryController.browse);
+router.get("/projectsteps", ProjectLifeController.browse);
 
 module.exports = router;
