@@ -3,35 +3,34 @@ import styled from "styled-components";
 export default styled.section`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border: 1px solid green;
   width: 70vw;
-  height: 32vh;
-  background-color: #183650;
-  border-radius: 20px;
-  margin: 5%;
+  border-radius: 8px;
+  border: 5px solid #183650;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  margin: 2em;
   img {
-    height: 96%;
-    width: 32%;
-    border-radius: 70px;
-    border: 6px solid #183650;
-    float: left;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
   }
   .articleContainer {
-    padding-left: 2em;
+    margin-left: 1em;
     article {
-      border: 6px solid #183650;
+      margin: 1.6em;
       border-radius: 20px;
-      margin-top: 4%;
-      height: 24vh;
       color: #183650;
-      background-color: white;
     }
     h1 {
-      margin-left: 3em;
-      padding: 0.5em;
+      letter-spacing: 0.1em;
+      padding: 1em;
       font-size: 1.6em;
     }
     p {
+      letter-spacing: 0.1em;
       font-size: 1em;
     }
   }
