@@ -1,8 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `apside` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `apside`;
 -- MySQL dump 10.13  Distrib 8.0.25, for Linux (x86_64)
 --
--- Host: localhost    Database: apside
+-- Host: 127.0.0.1    Database: apside
 -- ------------------------------------------------------
 -- Server version	8.0.29-0ubuntu0.20.04.3
 
@@ -41,6 +39,7 @@ CREATE TABLE `acquieredSkill` (
 
 LOCK TABLES `acquieredSkill` WRITE;
 /*!40000 ALTER TABLE `acquieredSkill` DISABLE KEYS */;
+INSERT INTO `acquieredSkill` VALUES (5,1),(3,3),(3,6),(1,7),(3,8),(10,8),(2,9),(6,11),(9,12),(1,13),(8,16),(4,17),(11,19),(7,21),(11,21),(2,26),(6,26),(4,28),(7,28),(9,32),(5,34),(10,35),(8,36),(4,42),(8,44),(11,44),(1,45),(6,45),(9,45),(10,53),(7,54),(5,56),(2,59);
 /*!40000 ALTER TABLE `acquieredSkill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +52,8 @@ DROP TABLE IF EXISTS `category`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  `img` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,7 +64,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'banque'),(2,'santé'),(3,'environnement'),(4,'industrie'),(5,'agro-alimentaire'),(6,'grande distribution'),(7,'commerce'),(8,'e-commerce'),(9,'culture'),(10,'éducation'),(11,'agriculture');
+INSERT INTO `category` VALUES (1,'banque','backend/public/assets/images/imgCategoryBanque.png'),(2,'santé','backend/public/assets/images/imgCategorySante.png'),(3,'environnement','backend/public/assets/images/imgCategoryEnvironnement.png'),(4,'industrie','backend/public/assets/images/imgCategoryIndustrie.png'),(5,'agro-alimentaire','backend/public/assets/images/imgCategoryAgroAlimentaire.png'),(6,'grande distribution','backend/public/assets/images/imgCategoryGrandeDistribution.png'),(7,'commerce','backend/public/assets/images/imgCategoryCommerce.png'),(8,'e-commerce','backend/public/assets/images/imgCategoryEcommerce.png'),(9,'culture','backend/public/assets/images/imgCategoryCulture.png'),(10,'éducation','backend/public/assets/images/imgCategoryEducation.png'),(11,'agriculture','backend/public/assets/images/imgCategoryAgriculture.png');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +92,7 @@ CREATE TABLE `neededSkill` (
 
 LOCK TABLES `neededSkill` WRITE;
 /*!40000 ALTER TABLE `neededSkill` DISABLE KEYS */;
-INSERT INTO `neededSkill` VALUES (43,1);
+INSERT INTO `neededSkill` VALUES (16,1),(28,1),(43,1),(2,2),(14,2),(48,2),(10,3),(26,3),(29,3),(5,4),(13,4),(30,4);
 /*!40000 ALTER TABLE `neededSkill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,6 +234,7 @@ CREATE TABLE `skillNot` (
 
 LOCK TABLES `skillNot` WRITE;
 /*!40000 ALTER TABLE `skillNot` DISABLE KEYS */;
+INSERT INTO `skillNot` VALUES (10,3),(7,4),(5,6),(10,8),(2,9),(5,11),(3,13),(3,16),(1,17),(3,18),(2,19),(11,19),(6,21),(11,21),(9,22),(1,23),(8,26),(4,27),(7,31),(2,36),(6,36),(4,38),(7,38),(9,42),(5,44),(11,44),(10,45),(8,46),(4,52),(8,54),(1,55),(6,55),(9,55);
 /*!40000 ALTER TABLE `skillNot` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,6 +290,7 @@ CREATE TABLE `wishedSkill` (
 
 LOCK TABLES `wishedSkill` WRITE;
 /*!40000 ALTER TABLE `wishedSkill` DISABLE KEYS */;
+INSERT INTO `wishedSkill` VALUES (9,1),(15,1),(47,1),(1,2),(11,2),(28,2),(5,3),(8,3),(10,3),(19,4),(28,4),(44,4),(3,5),(36,5),(58,5),(13,6),(28,6),(47,6),(23,7),(30,7),(56,7),(18,8),(38,8),(46,8),(14,9),(34,9),(46,9),(10,10),(37,10),(55,10),(21,11),(23,11),(46,11);
 /*!40000 ALTER TABLE `wishedSkill` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -301,4 +303,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-29 16:05:29
+-- Dump completed on 2022-06-29 19:04:01
