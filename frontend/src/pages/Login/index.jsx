@@ -1,11 +1,16 @@
+import FormLogin from "@components/FormLogin";
 import Header from "@components/Header";
+import login from "@assets/login/login.png";
 import SLogin from "./style";
 
 export default function Login() {
   return (
     <SLogin>
       <Header />
-      connexion
+      <div className="loginContainer">
+        <img src={login} className="loginPicture" alt="loginPicture" />
+        <FormLogin />
+      </div>
     </SLogin>
   );
 }
