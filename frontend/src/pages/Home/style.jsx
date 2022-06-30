@@ -165,4 +165,27 @@ export default styled.div`
       border: 1px solid red;
     }
   }
+
+  .conteneur {
+    display: flex;
+  }
+  .addLink {
+    background-color: #e89759;
+    border: 3px solid #e89759;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+  }
 `;

@@ -166,6 +166,14 @@ export default function Home() {
           </section>
         </section>
       </section>
+      <div className="conteneur">
+        <div className="addLink">
+          <Link to="/newprojets">Ajoutez un projet</Link>
+        </div>
+        <div className="addLink">
+          <Link to="/utilisateurs">Cherchez un allié</Link>
+        </div>
+      </div>
     </SHome>
   );
 }
