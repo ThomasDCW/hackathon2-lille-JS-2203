@@ -14,14 +14,14 @@ class ProjectManager extends AbstractManager {
 
   findProject(id) {
     return this.connection.query(
-      `select p.title, p.description, p.creationDate, p.client, uc.firstname as creatorFirstname, uc.lastname as creatorLastname, uc.agency as creatorAgency, uc.position as creatorPosition, c.name, c.img, pl.name from ${this.table} as p LEFT JOIN participant as pa ON p.id = pa.project_id  LEFT JOIN user AS u on pa.user_id = u.id LEFT JOIN user AS uc ON uc.id=p.userCreatorId LEFT JOIN category AS c ON p.category_id = c.id LEFT JOIN projectLife AS pl ON pl.id = p.projectLife_id LEFT JOIN neededSkill as ns ON ns.project_id = p.id LEFT JOIN skill as s ON s.id = ns.skill_id  where p.id = ? `,
+      `select p.title, p.description, p.creationDate, p.client, uc.firstname as creatorFirstname, uc.lastname as creatorLastname, uc.agency as creatorAgency, uc.position as creatorPosition, c.name, c.img, pl.name from ${this.table} as p LEFT JOIN user AS uc ON uc.id=p.userCreatorId LEFT JOIN category AS c ON p.category_id = c.id LEFT JOIN projectLife AS pl ON pl.id = p.projectLife_id where p.id = ? `,
       [id]
     );
   }
 
   findProjectSkills(id) {
     return this.connection.query(
-      `select sk.id, sk.name from ${this.table} as p LEFT JOIN neededSkill as ns on p.id = ns.project_id LEFT JOIN skill as sk on sk.id = ns.skill_id where p.id = ? `,
+      `select sk.name from ${this.table} as p LEFT JOIN neededSkill as ns on p.id = ns.project_id LEFT JOIN skill as sk on sk.id = ns.skill_id where p.id = ? `,
       [id]
     );
   }
