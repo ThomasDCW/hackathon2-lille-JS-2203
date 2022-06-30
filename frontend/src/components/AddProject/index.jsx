@@ -67,7 +67,7 @@ export default function AddProject() {
             <option value>-- Stade du projet --</option>
             {projectSteps.map((project) => (
               <option value={project.id} key={project.id}>
-                {project.step}
+                {project.name}
               </option>
             ))}
           </select>

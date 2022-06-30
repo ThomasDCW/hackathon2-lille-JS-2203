@@ -14,7 +14,7 @@ class ProjectManager extends AbstractManager {
 
   findProject(id) {
     return this.connection.query(
-      `select p.id, p.title, p.description, p.creationDate, p.client, uc.firstname as creatorFirstname, uc.lastname as creatorLastname, uc.agency as creatorAgency, uc.position as creatorPosition, c.name, c.img, pl.name, group_concat(s.name) as skill, group_concat(u.id)  from  ${this.table} as p LEFT JOIN participant as pa ON p.id = pa.project_id  LEFT JOIN user AS u on pa.user_id = u.id LEFT JOIN user AS uc ON uc.id=p.userCreatorId LEFT JOIN category AS c ON p.category_id = c.id LEFT JOIN projectLife AS pl ON pl.id = p.projectLife_id LEFT JOIN neededSkill as ns ON ns.project_id = p.id LEFT JOIN skill as s ON s.id = ns.skill_id  where p.id = ? `,
+      `select p.title, p.description, p.creationDate, p.client, uc.firstname as creatorFirstname, uc.lastname as creatorLastname, uc.agency as creatorAgency, uc.position as creatorPosition, c.name, c.img, pl.name from ${this.table} as p LEFT JOIN participant as pa ON p.id = pa.project_id  LEFT JOIN user AS u on pa.user_id = u.id LEFT JOIN user AS uc ON uc.id=p.userCreatorId LEFT JOIN category AS c ON p.category_id = c.id LEFT JOIN projectLife AS pl ON pl.id = p.projectLife_id LEFT JOIN neededSkill as ns ON ns.project_id = p.id LEFT JOIN skill as s ON s.id = ns.skill_id  where p.id = ? `,
       [id]
     );
   }
@@ -56,7 +56,7 @@ class ProjectManager extends AbstractManager {
 
   insert(project) {
     return this.connection.query(
-      `insert into ${ProjectManager.table} (name, description, img, creationDate, client, userCreatorid, projectLife_id, category_id) values (?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${ProjectManager.table} (title, description, img, creationDate, client, userCreatorid, projectLife_id, category_id) values (?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         project.name,
         project.description,
