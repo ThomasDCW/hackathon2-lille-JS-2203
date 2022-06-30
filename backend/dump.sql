@@ -64,7 +64,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'banque','backend/public/assets/images/imgCategoryBanque.png'),(2,'santé','backend/public/assets/images/imgCategorySante.png'),(3,'environnement','backend/public/assets/images/imgCategoryEnvironnement.png'),(4,'industrie','backend/public/assets/images/imgCategoryIndustrie.png'),(5,'agro-alimentaire','backend/public/assets/images/imgCategoryAgroAlimentaire.png'),(6,'grande distribution','backend/public/assets/images/imgCategoryGrandeDistribution.png'),(7,'commerce','backend/public/assets/images/imgCategoryCommerce.png'),(8,'e-commerce','backend/public/assets/images/imgCategoryEcommerce.png'),(9,'culture','backend/public/assets/images/imgCategoryCulture.png'),(10,'éducation','backend/public/assets/images/imgCategoryEducation.png'),(11,'agriculture','backend/public/assets/images/imgCategoryAgriculture.png');
+INSERT INTO `category` VALUES (1,'Banque','src/assets/project/imgCategoryBanque.png'),(2,'Santé','src/assets/project/imgCategorySante.png'),(3,'Environnement','src/assets/project/imgCategoryEnvironnement.png'),(4,'Industrie','src/assets/project/imgCategoryIndustrie.png'),(5,'Agro-alimentaire','src/assets/project/imgCategoryAgroAlimentaire.png'),(6,'Grande distribution','src/assets/project/imgCategoryGrandeDistribution.png'),(7,'Commerce','src/assets/project/imgCategoryCommerce.png'),(8,'E-commerce','src/assets/project/imgCategoryEcommerce.png'),(9,'Culture','src/assets/project/imgCategoryCulture.png'),(10,'Education','src/assets/project/imgCategoryEducation.png'),(11,'Agriculture','src/assets/project/imgCategoryAgriculture.png');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,6 +120,7 @@ CREATE TABLE `participant` (
 
 LOCK TABLES `participant` WRITE;
 /*!40000 ALTER TABLE `participant` DISABLE KEYS */;
+INSERT INTO `participant` VALUES (4,2),(4,3),(3,4),(3,5),(2,6),(2,7),(1,8),(1,9);
 /*!40000 ALTER TABLE `participant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,7 +133,7 @@ DROP TABLE IF EXISTS `project`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `project` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
+  `title` varchar(128) NOT NULL,
   `description` mediumtext,
   `img` varchar(256) DEFAULT NULL,
   `creationDate` date DEFAULT NULL,
@@ -303,4 +304,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-29 19:04:01
+-- Dump completed on 2022-06-30  1:53:41

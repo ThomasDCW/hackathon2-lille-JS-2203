@@ -2,6 +2,7 @@ import Header from "@components/Header";
 import { useState, useEffect } from "react";
 import Result from "@components/Result";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import SHome from "./style";
 
 export default function Home() {
@@ -9,16 +10,27 @@ export default function Home() {
   const [skills, setSkills] = useState([]);
   const [categories, setCategories] = useState([]);
   // const [projectState, setProjectState] = useState([]);
+  const [querySent, setQuerySent] = useState("");
+  const [formData, setFormData] = useState({
+    jeton1: false,
+    jeton2: false,
+    jeton3: false,
+    jeton4: false,
+    jeton5: false,
+    jeton6: false,
+  });
+
+  const handleChoiceLinks = (evt) => {
+    evt.target.classList.toggle("selected");
+    const key = evt.target.name;
+    setFormData({ ...formData, [key]: !formData[key] });
+  };
+
   const makeQuestSubmit = () => {
-    // const allTags = Object.keys(formData); // Object.keys() gets all keys of an object and puts it into an array
-    // const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
-    // const subQueries = validTags.map((tag) => {
-    //   const smiley = smileys.find((smi) => smi.key === tag);
-    //   const subQuery = smiley.query;
-    //   return subQuery;
-    // });
-    // const query = subQueries.join("&");
-    // setQuerySent(query);
+    const allTags = Object.keys(formData);
+    const validTags = allTags.filter((keyForm) => formData[keyForm] === true);
+    const query = validTags.join(",");
+    setQuerySent(query);
     setActive(!active);
   };
 
@@ -37,10 +49,30 @@ export default function Home() {
       <main>
         <div className="list">
           {skills.map((skill) => {
-            return <div className="jeton">{skill.name}</div>;
+            return (
+              <input
+                type="text"
+                name={skill.name}
+                className="jeton"
+                value={skill.name}
+                onClick={(event) => {
+                  handleChoiceLinks(event);
+                }}
+              />
+            );
           })}
           {categories.map((categorie) => {
-            return <div className="jeton">{categorie.name}</div>;
+            return (
+              <input
+                type="text"
+                name={categorie.name}
+                className="jeton"
+                value={categorie.name}
+                onClick={(event) => {
+                  handleChoiceLinks(event);
+                }}
+              />
+            );
           })}
         </div>
         <div className="buttonResults">
@@ -49,17 +81,17 @@ export default function Home() {
             className={`button ${active ? "" : "ok-off"} `}
             onClick={makeQuestSubmit}
           >
-            Are you ok?
+            OK?
           </button>
 
-          {/* <Link to={`/suggestion/results?${querySent}`}> */}
-          <button
-            type="button"
-            className={`button ${active ? "link-off" : ""} `}
-          >
-            Show your result
-          </button>
-          {/* </Link> */}
+          <Link to={`/projets?tags=${querySent}`}>
+            <button
+              type="button"
+              className={`button ${active ? "link-off" : ""} `}
+            >
+              Envoyez les projets
+            </button>
+          </Link>
         </div>
       </main>
       <Result />

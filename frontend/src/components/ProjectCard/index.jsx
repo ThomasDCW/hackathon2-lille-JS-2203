@@ -1,24 +1,63 @@
-import project from "@assets/project/project.png";
+import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 import SProjectCard from "./style";
 
-export default function ProjectCard() {
+export default function ProjectCard({
+  img,
+  title,
+  client,
+  description,
+  creationDate,
+  step,
+  creatorLN,
+  creatorFN,
+  creatorPosition,
+  creatorAgency,
+}) {
   return (
     <SProjectCard>
-      <img src={project} alt="" />
+      <img src={img} alt="" />
       <div className="articleContainer">
         <article>
-          <h1>Nom du projet</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-            cumque dolore officia qui quam, vitae magnam deleniti rem ea
-            cupiditate exercitationem consectetur alias quaerat! Tempore odio
-            possimus obcaecati nesciunt repellat. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Excepturi cumque dolore officia qui
-            quam, vitae magnam deleniti rem ea cupiditate exercitationem
-            consectetur alias quaerat! Tempore odio possimus obcaecati nesciunt
+          <div className="containDateStep">
+            <div className="creationDate">
+              <span className="stepDate">Date de création : </span>
+              {creationDate}
+            </div>
+            <div>
+              <span className="stepDate">Status du projet : </span>
+              {step}
+            </div>
+          </div>
+          <h1>
+            {title} <span className="client">( {client} )</span>
+          </h1>
+          <p>{description}</p>
+          <p className="creator">
+            Projet créé par{" "}
+            <span className="spanCreator">
+              {creatorFN} {creatorLN}
+            </span>{" "}
+            au poste de <span className="spanCreator">{creatorPosition}</span>{" "}
+            de l'agence de <span className="spanCreator">{creatorAgency}</span>.
           </p>
+          <div>
+            <Link to="/">Details du projet</Link>
+          </div>
         </article>
       </div>
     </SProjectCard>
   );
 }
+ProjectCard.propTypes = {
+  creationDate: propTypes.string.isRequired,
+  img: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
+  client: propTypes.string.isRequired,
+  description: propTypes.string.isRequired,
+  creatorLN: propTypes.string.isRequired,
+  creatorFN: propTypes.string.isRequired,
+  creatorPosition: propTypes.string.isRequired,
+  creatorAgency: propTypes.string.isRequired,
+  step: propTypes.string.isRequired,
+};
