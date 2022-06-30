@@ -4,8 +4,7 @@ export default styled.div`
   padding: 2em;
   border: 2px solid #183650;
   display: flex;
-  .articleContainer {
-  }
+
   img {
     height: 250px;
     width: 250px;
