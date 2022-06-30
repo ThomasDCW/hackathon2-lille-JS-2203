@@ -44,7 +44,7 @@ export default function Home() {
           .sort(() => {
             return Math.random() - 0.5;
           })
-          .slice(0, 10)
+          .slice(0, 15)
       );
     });
     axios.get(`http://localhost:5000/categories`).then(({ data }) => {
@@ -70,85 +70,92 @@ export default function Home() {
   return (
     <SHome>
       <Header />
-      <main>
-        <div className="list">
-          {allTokens.map((allToken) => {
-            if (
-              allToken.name === "Banque" ||
-              allToken.name === "Santé" ||
-              allToken.name === "Environnement" ||
-              allToken.name === "Industrie" ||
-              allToken.name === "Agro-alimentaire" ||
-              allToken.name === "Grande distribution" ||
-              allToken.name === "Commerce" ||
-              allToken.name === "E-commerce" ||
-              allToken.name === "Culture" ||
-              allToken.name === "Education" ||
-              allToken.name === "Agriculture"
-            ) {
+      <section className="contain">
+        <main>
+          <div className="list">
+            {allTokens.map((allToken) => {
+              if (
+                allToken.name === "Banque" ||
+                allToken.name === "Santé" ||
+                allToken.name === "Environnement" ||
+                allToken.name === "Industrie" ||
+                allToken.name === "Agro-alimentaire" ||
+                allToken.name === "Grande distribution" ||
+                allToken.name === "Commerce" ||
+                allToken.name === "E-commerce" ||
+                allToken.name === "Culture" ||
+                allToken.name === "Education" ||
+                allToken.name === "Agriculture"
+              ) {
+                return (
+                  <input
+                    type="text"
+                    name={allToken.name}
+                    className="jetonCateg"
+                    value={allToken.name}
+                    onClick={(event) => {
+                      handleChoiceLinks(event);
+                    }}
+                  />
+                );
+              }
+              if (
+                allToken.name === "Idée" ||
+                allToken.name === "Cadrage" ||
+                allToken.name === "Réalisation" ||
+                allToken.name === "Clôture"
+              ) {
+                return (
+                  <input
+                    type="text"
+                    name={allToken.name}
+                    className="jetonStep"
+                    value={allToken.name}
+                    onClick={(event) => {
+                      handleChoiceLinks(event);
+                    }}
+                  />
+                );
+              }
+
               return (
                 <input
                   type="text"
                   name={allToken.name}
-                  className="jetonCateg"
+                  className="jetonSkill"
                   value={allToken.name}
                   onClick={(event) => {
                     handleChoiceLinks(event);
                   }}
                 />
               );
-            }
-            if (
-              allToken.name === "idée" ||
-              allToken.name === "cadrage" ||
-              allToken.name === "réalisation" ||
-              allToken.name === "clôture"
-            ) {
-              return (
-                <input
-                  type="text"
-                  name={allToken.name}
-                  className="jetonStep"
-                  value={allToken.name}
-                  onClick={(event) => {
-                    handleChoiceLinks(event);
-                  }}
-                />
-              );
-            }
+            })}
+          </div>
+        </main>
+        <section className="containButton">
+          <div>
+            <p>La Machine A Projets</p>
+            <div className="buttonResults">
+              <button
+                type="button"
+                className={`button ${active ? "" : "ok-off"} `}
+                onClick={makeQuestSubmit}
+              >
+                OK
+              </button>
 
-            return (
-              <input
-                type="text"
-                name={allToken.name}
-                className="jetonSkill"
-                value={allToken.name}
-                onClick={(event) => {
-                  handleChoiceLinks(event);
-                }}
-              />
-            );
-          })}
-        </div>
-        <div className="buttonResults">
-          <button
-            type="button"
-            className={`button ${active ? "" : "ok-off"} `}
-            onClick={makeQuestSubmit}
-          >
-            OK?
-          </button>
-
-          <Link to={`/projets?tags=${querySent}`}>
-            <button
-              type="button"
-              className={`button ${active ? "link-off" : ""} `}
-            >
-              Envoyez les projets
-            </button>
-          </Link>
-        </div>
-      </main>
+              <Link to={`/projets?tags=${querySent}`}>
+                <button
+                  type="button"
+                  className={`button ${active ? "link-off" : ""} `}
+                >
+                  Envoyez les projets
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </section>
       <Result />
     </SHome>
   );
