@@ -91,7 +91,7 @@ export default function Home() {
                   <input
                     type="text"
                     name={allToken.name}
-                    className="jetonCateg"
+                    className="jetonCateg jeton"
                     value={allToken.name}
                     onClick={(event) => {
                       handleChoiceLinks(event);
@@ -109,7 +109,7 @@ export default function Home() {
                   <input
                     type="text"
                     name={allToken.name}
-                    className="jetonStep"
+                    className="jeton jetonStep"
                     value={allToken.name}
                     onClick={(event) => {
                       handleChoiceLinks(event);
@@ -122,7 +122,7 @@ export default function Home() {
                 <input
                   type="text"
                   name={allToken.name}
-                  className="jetonSkill"
+                  className="jeton jetonSkill"
                   value={allToken.name}
                   onClick={(event) => {
                     handleChoiceLinks(event);
