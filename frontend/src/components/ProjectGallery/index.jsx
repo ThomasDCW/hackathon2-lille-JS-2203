@@ -1,15 +1,20 @@
 import ProjectCard from "@components/ProjectCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import SProjectGallery from "./style";
 
 export default function ProjectGallery() {
   const [projects, setProjects] = useState([]);
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/projects`).then(({ data }) => {
-      setProjects(data);
-    });
+    const request = searchParams.toString();
+    axios
+      .get(`http://localhost:5000/projectresults?${request}`)
+      .then(({ data }) => {
+        setProjects(data);
+      });
   }, []);
   return (
     <SProjectGallery>
