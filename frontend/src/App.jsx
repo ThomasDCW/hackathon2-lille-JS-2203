@@ -1,8 +1,20 @@
+import Login from "@pages/Login";
+import Home from "@pages/Home";
+import Profil from "@pages/Profil";
+import { Routes, Route } from "react-router-dom";
+import ProjectPage from "@pages/ProjectPage";
+import SGlobal from "./style";
+
 function App() {
   return (
-    <div className="App">
-      <p>coucou</p>
-    </div>
+    <SGlobal>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/accueil" element={<Home />} />
+        <Route path="/perso" element={<Profil />} />
+        <Route path="/projets" element={<ProjectPage />} />
+      </Routes>
+    </SGlobal>
   );
 }
 
