@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img from "./fondMachine.png";
 
 export default styled.div`
   .contain {
@@ -7,7 +8,7 @@ export default styled.div`
       width: 70vw;
       border: 10px solid var(--color-blue);
       background-color: rgb(240, 240, 240);
-      margin: 1rem 0 0 1rem;
+      margin: 1rem 0 0 7rem;
       height: 70vh;
       padding: 1rem;
       overflow: scroll;
@@ -20,8 +21,9 @@ export default styled.div`
 
     .jetonCateg {
       background-color: var(--color-blue);
-      border: 5px solid #e89759;
-      margin: 0.5rem;
+      /* border: 5px solid #e89759; */
+      border-radius: 10px;
+      margin: 0.8rem;
       padding: 0.9rem;
       color: white;
       width: 10rem;
@@ -34,8 +36,9 @@ export default styled.div`
     }
     .jetonSkill {
       background-color: #5abdb2;
-      border: 5px solid var(--color-blue);
-      margin: 0.5rem;
+      /* border: 5px solid var(--color-blue); */
+      border-radius: 10px;
+      margin: 0.8rem;
       padding: 0.9rem;
       color: white;
       width: 10rem;
@@ -48,8 +51,9 @@ export default styled.div`
     }
     .jetonStep {
       background-color: #e89759;
-      border: 5px solid #5abdb2;
-      margin: 0.5rem;
+      /* border: 5px solid #5abdb2; */
+      border-radius: 10px;
+      margin: 0.8rem;
       padding: 0.9rem;
       color: white;
       width: 10rem;
@@ -117,25 +121,45 @@ export default styled.div`
   .containButton {
     width: 12vw;
     border: 10px solid var(--color-blue);
-    background-color: var(--color-blue);
-    height: 70vh;
+    background-image: url(${img});
+    background-size: 23rem;
+    height: 73vh;
     margin-top: 1rem;
-    padding: 1rem;
+
     p {
       color: #e89759;
       font-weight: bolder;
-      font-size: 2rem;
+      font-size: 1rem;
       text-align: center;
+
+      margin: 1rem 0;
+      span {
+        font-size: 2.5rem;
+        color: white;
+      }
     }
     .buttonResults {
       display: flex;
       justify-content: center;
       .button {
-        background-color: var(--color-orange);
-        padding: 0.5em 1.75em 0.5em;
-        margin: 2rem 0;
+        background-color: #e89759;
+        border: 3px solid #e89759;
+        border-radius: 5px;
+        margin: 15rem 0;
         text-align: center;
+        color: white;
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.5rem;
       }
+    }
+    .opacity {
+      background-color: #183650aa;
+      width: 100%;
+      height: 100%;
+    }
+    .slogan {
+      padding-top: 4rem;
     }
   }
 `;
