@@ -57,7 +57,7 @@ export default styled.div`
       }
     }
     a {
-      width: 40%;
+      width: 20%;
       text-decoration: none;
       text-align: center;
       padding: 0.5em;
@@ -69,7 +69,7 @@ export default styled.div`
     a:hover {
       transition: 0.5s;
       color: white;
-      background: #183650;
+      background: #5abdb2;
     }
   }
   .mail {

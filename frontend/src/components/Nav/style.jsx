@@ -3,7 +3,9 @@ import styled from "styled-components";
 export default styled.nav`
   display: flex;
   justify-content: center;
+
   a {
+    font-weight: bold;
     text-decoration: none;
     transition: background-size 1.2s;
     color: #454545;

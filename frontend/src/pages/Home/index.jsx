@@ -1,8 +1,8 @@
-import Header from "@components/Header";
 import { useState, useEffect } from "react";
-
-import axios from "axios";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import Header from "@components/Header";
+import Nav from "@components/Nav";
 import SHome from "./style";
 
 export default function Home() {
@@ -70,6 +70,7 @@ export default function Home() {
   return (
     <SHome>
       <Header />
+      <Nav />
       <section className="contain">
         <main>
           <div className="list">
@@ -136,9 +137,10 @@ export default function Home() {
           <section className="opacity">
             <div className="slogan">
               <p>
-                <span>Partagez</span> vos idées,
+                <span>Partagez</span>
+                <br /> vos idées,
                 <p>
-                  <span>Consultez</span> les projets,
+                  <span>Consultez</span> <br /> les projets,
                 </p>
                 <p>
                   <span>co-créez</span>
@@ -166,14 +168,6 @@ export default function Home() {
           </section>
         </section>
       </section>
-      <div className="conteneur">
-        <div className="addLink">
-          <Link to="/newprojets">Ajoutez un projet</Link>
-        </div>
-        <div className="addLink">
-          <Link to="/utilisateurs">Cherchez un allié</Link>
-        </div>
-      </div>
     </SHome>
   );
 }

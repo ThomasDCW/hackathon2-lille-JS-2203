@@ -130,30 +130,36 @@ export default styled.div`
     margin-top: 1rem;
 
     p {
+      padding-top: 3em;
       color: #e89759;
       font-weight: bolder;
       font-size: 1rem;
       text-align: center;
 
-      margin: 1rem 0;
       span {
-        font-size: 2.5rem;
+        font-size: 1.2rem;
         color: white;
       }
     }
+
     .buttonResults {
       display: flex;
       justify-content: center;
       .button {
+        cursor: pointer;
         background-color: #e89759;
         border: 3px solid #e89759;
         border-radius: 5px;
-        margin: 15rem 0;
+        margin: 10rem 0;
         text-align: center;
         color: white;
         width: 12rem;
         height: 4rem;
         font-size: 1.5rem;
+      }
+      .button:hover {
+        background-color: white;
+        color: #e89759;
       }
     }
     .opacity {
@@ -165,6 +171,7 @@ export default styled.div`
       border: 1px solid red;
     }
   }
+
   @media screen and (max-width: 600px) {
     width: 100vw;
     .contain {
@@ -177,7 +184,6 @@ export default styled.div`
         width: 80vw;
         .jetonCateg {
           background-color: var(--color-blue);
-          /* border: 5px solid #e89759; */
           border-radius: 10px;
           margin: 0.8rem;
           padding: 0.9rem;
@@ -192,7 +198,6 @@ export default styled.div`
         }
         .jetonSkill {
           background-color: #5abdb2;
-          /* border: 5px solid var(--color-blue); */
           border-radius: 10px;
           margin: 0.8rem;
           padding: 0.9rem;
@@ -207,7 +212,6 @@ export default styled.div`
         }
         .jetonStep {
           background-color: #e89759;
-          /* border: 5px solid #5abdb2; */
           border-radius: 10px;
           margin: 0.8rem;
           padding: 0.9rem;
@@ -236,27 +240,5 @@ export default styled.div`
         }
       }
     }
-
-  .conteneur {
-    display: flex;
-  }
-  .addLink {
-    background-color: #e89759;
-    border: 3px solid #e89759;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    width: 6rem;
-    height: 3rem;
-    margin: auto;
-    margin-top: 2rem;
-    display: flex;
-  }
-  a {
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    justify-content: center;
   }
 `;

@@ -13,7 +13,6 @@ export default function ProjectDetail() {
       setProject(data);
     });
   }, []);
-
   return (
     <SProjectDetail>
       <img src={`/${project.img}`} alt={project.img} />

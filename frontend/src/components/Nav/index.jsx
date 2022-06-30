@@ -7,6 +7,7 @@ export default function Nav() {
       <Link to="/accueil">La Machine à Projet</Link>
       <Link to="/toutlesprojets">Consultez les projets</Link>{" "}
       <Link to="/utilisateurs">Cherchez un profil</Link>{" "}
+      <Link to="/nouveauprojet">Déposez un projet</Link>
     </SNav>
   );
 }
