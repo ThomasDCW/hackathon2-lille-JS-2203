@@ -1,6 +1,6 @@
 import Header from "@components/Header";
 import { useState, useEffect } from "react";
-import Result from "@components/Result";
+
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SHome from "./style";
@@ -166,7 +166,6 @@ export default function Home() {
           </section>
         </section>
       </section>
-      <Result />
     </SHome>
   );
 }

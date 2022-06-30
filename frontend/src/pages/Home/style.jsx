@@ -83,6 +83,7 @@ export default styled.div`
     border: 7px solid var(--color-blue);
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .jetonStep.selected {
     opacity: 70%;
@@ -97,6 +98,7 @@ export default styled.div`
     border: 10px solid #5abdb2;
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .jetonCateg.selected {
     opacity: 70%;
@@ -111,12 +113,13 @@ export default styled.div`
     color: var(--color-blue);
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .link-off {
     display: none;
   }
   .ok-off {
-    opacity: 20%;
+    display: none;
   }
   .containButton {
     width: 12vw;
@@ -158,8 +161,8 @@ export default styled.div`
       width: 100%;
       height: 100%;
     }
-    .slogan {
-      padding-top: 4rem;
+    .buttonBottom {
+      border: 1px solid red;
     }
   }
 `;
