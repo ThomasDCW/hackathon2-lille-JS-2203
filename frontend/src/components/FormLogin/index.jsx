@@ -4,7 +4,7 @@ import SFormLogin from "./style";
 export default function FormLogin() {
   return (
     <SFormLogin>
-      <h1>Bienvenue sur la Machine à projet</h1>
+      <h1>Bienvenue sur la Machine à projets</h1>
       <form>
         <h2>Se connecter</h2>
         <input type="text" placeholder="Identifiant" />
@@ -17,9 +17,9 @@ export default function FormLogin() {
         <Link to="/accueil">Connexion</Link>
       </div>
       <div className="textContainer">
-        <p>Pas encore de compte ?</p>
+        <p>Pas encore de compte ? </p>
         <p>
-          <span>Créer un compte</span>
+          <span> Créer un compte</span>
         </p>
       </div>
     </SFormLogin>

@@ -11,13 +11,12 @@ export default styled.div`
     margin-bottom: 1em;
     text-align: center;
   }
-
   form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid #e89759;
-    border-radius: 8px;
+    border-radius: 3px;
     height: 50%;
     width: 100%;
     .textContainer {
@@ -25,16 +24,16 @@ export default styled.div`
       text-decoration: underline;
       display: flex;
       justify-content: center;
-      font-size: 0.8em;
-      margin: 0.8em;
+      font-size: 0.9em;
+      margin: 1em;
     }
     h2 {
       margin: 1em;
-      font-size: 1éem;
+      font-size: 1.2em;
     }
     input {
-      margin: 1.2em;
-      outline: 0;
+      margin: 1em;
+
       border-width: 0 0 1px;
       border-color: #183650;
       ::placeholder {
@@ -46,7 +45,7 @@ export default styled.div`
   .textContainer {
     display: flex;
     justify-content: center;
-    font-size: 0.6em;
+    font-size: 0.9em;
     margin-top: 3em;
     span {
       color: #e89759;

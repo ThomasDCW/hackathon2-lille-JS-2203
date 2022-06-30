@@ -21,14 +21,5 @@ export default styled.div`
   font-weight: 400;
   box-sizing: border-box;
   letter-spacing: 0.2rem;
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
 
-  p {
-    font-size: 1rem;
-  }
 `;
