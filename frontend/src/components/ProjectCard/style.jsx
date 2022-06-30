@@ -19,19 +19,44 @@ export default styled.section`
   }
   .articleContainer {
     margin-left: 1em;
+    width: 100%;
     article {
       margin: 1.6em;
       border-radius: 20px;
       color: #183650;
-    }
-    h1 {
-      letter-spacing: 0.1em;
-      padding: 1em;
-      font-size: 1.6em;
-    }
-    p {
-      letter-spacing: 0.1em;
-      font-size: 1em;
+      .containDateStep {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -4rem;
+        .stepDate {
+          font-size: 0.8rem;
+        }
+      }
+      h1 {
+        letter-spacing: 0.1em;
+        padding: 1em;
+        font-size: 1.6em;
+        font-weight: bold;
+        span {
+          font-size: 0.6em;
+          font-weight: lighter;
+        }
+      }
+      p {
+        letter-spacing: 0.1em;
+        font-size: 1em;
+      }
+      .creator {
+        color: #ffa60098;
+        font-size: 1.2rem;
+
+        .spanCreator {
+          color: orange;
+          font-weight: bold;
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 `;
