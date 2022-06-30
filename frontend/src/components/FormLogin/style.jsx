@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-  width: 40vw;
+  width: 50vw;
   height: 72vh;
   color: #183650;
   margin-top: 2vh;
@@ -15,7 +15,7 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid #e89759;
+    border: 2px solid #5abdb2;
     border-radius: 3px;
     height: 50%;
     width: 100%;
@@ -69,8 +69,11 @@ export default styled.div`
     }
     a:hover {
       transition: 0.6s;
-      color: white;
-      background: #183650;
+      color: #183650;
+      background: #5abdb2;
     }
+  }
+  @media screen and (max-width: 600px) {
+    width: 86vw;
   }
 `;
