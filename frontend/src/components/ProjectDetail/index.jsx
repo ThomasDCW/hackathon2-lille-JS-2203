@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import playImg from "@assets/img/play-solid.svg";
 import pauseImg from "@assets/img/pause-solid.svg";
 import SProjectDetail from "./style";
@@ -51,7 +51,6 @@ export default function ProjectDetail() {
             {project.title} <span className="client">( {project.client} )</span>
           </h1>
           <p>{project.description}</p>
-
           <button alt="play" type="button" onClick={startOrPause} />
           <p>
             Pourquoi: <br />
