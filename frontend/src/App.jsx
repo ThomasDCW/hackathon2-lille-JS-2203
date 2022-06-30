@@ -19,6 +19,7 @@ function App() {
         <Route path="/newprojets" element={<NewProject />} />
         <Route path="/utilisateurs" element={<SearchUser />} />
         <Route path="/projets/:id" element={<ProjectDetailPage />} />
+        <Route path="/projets" element={<ProjectDetailPage />} />
       </Routes>
     </SGlobal>
   );

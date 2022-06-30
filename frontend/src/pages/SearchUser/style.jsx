@@ -14,7 +14,7 @@ export default styled.div`
       border-color: #183650;
       ::placeholder {
         color: #454545;
-        font-size: 1.3em;
+        font-size: 1em;
       }
     }
   }
