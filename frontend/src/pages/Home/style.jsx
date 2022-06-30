@@ -83,6 +83,7 @@ export default styled.div`
     border: 7px solid var(--color-blue);
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .jetonStep.selected {
     opacity: 70%;
@@ -97,6 +98,7 @@ export default styled.div`
     border: 10px solid #5abdb2;
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .jetonCateg.selected {
     opacity: 70%;
@@ -111,12 +113,13 @@ export default styled.div`
     color: var(--color-blue);
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
   .link-off {
     display: none;
   }
   .ok-off {
-    opacity: 20%;
+    display: none;
   }
   .containButton {
     width: 12vw;
@@ -158,8 +161,8 @@ export default styled.div`
       width: 100%;
       height: 100%;
     }
-    .slogan {
-      padding-top: 4rem;
+    .buttonBottom {
+      border: 1px solid red;
     }
   }
   @media screen and (max-width: 600px) {
@@ -233,5 +236,27 @@ export default styled.div`
         }
       }
     }
+
+  .conteneur {
+    display: flex;
+  }
+  .addLink {
+    background-color: #e89759;
+    border: 3px solid #e89759;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
   }
 `;

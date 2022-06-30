@@ -1,5 +1,5 @@
 import logo from "@assets/logo/logo.png";
-import profil from "@assets/login/profil.jpg";
+import profil from "@assets/user/user.png";
 import Avatar from "@mui/material/Avatar";
 import SHeader from "./style";
 
