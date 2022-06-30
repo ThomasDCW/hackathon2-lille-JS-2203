@@ -27,7 +27,7 @@ export default function SearchUser() {
       <div className="searchbar">
         <input
           type="text"
-          placeholder="Chechez un profil"
+          placeholder="Tapez une compétence"
           onChange={handleSearch}
         />
       </div>
