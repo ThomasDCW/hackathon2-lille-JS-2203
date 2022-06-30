@@ -22,6 +22,8 @@ export default styled.div`
     margin: 4vh 0;
     text-align: center;
   }
+  input {
+  }
   .jetonCateg {
     background-color: var(--color-blue);
     border: 5px solid #e89759;
@@ -66,5 +68,16 @@ export default styled.div`
     justify-content: center;
     text-align: center;
     font-size: 1.2rem;
+  }
+  .selected {
+    border: 5px solid var(--color-button);
+    opacity: 50%;
+  }
+
+  .link-off {
+    display: none;
+  }
+  .ok-off {
+    opacity: 20%;
   }
 `;
