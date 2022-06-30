@@ -133,8 +133,18 @@ export default function Home() {
           </div>
         </main>
         <section className="containButton">
-          <div>
-            <p>La Machine A Projets</p>
+          <section className="opacity">
+            <div className="slogan">
+              <p>
+                <span>Partagez</span> vos idées,
+                <p>
+                  <span>Consultez</span> les projets,
+                </p>
+                <p>
+                  <span>co-créez</span>
+                </p>
+              </p>
+            </div>
             <div className="buttonResults">
               <button
                 type="button"
@@ -149,11 +159,11 @@ export default function Home() {
                   type="button"
                   className={`button ${active ? "link-off" : ""} `}
                 >
-                  Envoyez les projets
+                  Consultez les projets
                 </button>
               </Link>
             </div>
-          </div>
+          </section>
         </section>
       </section>
       <Result />
