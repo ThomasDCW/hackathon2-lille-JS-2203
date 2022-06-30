@@ -16,11 +16,22 @@ export default function ProjectDetail() {
     axios.get(`http://localhost:5000/projects/${id}`).then(({ data }) => {
       setProject(data);
       setCreatorProject(data.projet.creationDate.slice(0, 10));
+      setAudio(new Audio(`http://localhost:5000/assets/descriptionProjet.mp3`));
     });
   }, []);
-
+  const startOrPause = () => {
+    if (playOn) {
+      audio.pause();
+      setPlayOn(false);
+      setPlayOrPauseImg(playImg);
+    } else {
+      audio.play();
+      setPlayOn(true);
+      setPlayOrPauseImg(pauseImg);
+    }
+  };
   return (
-    <SProjectDetail>
+    <SProjectDetail img={playOrPauseImg}>
       {project.projet ? (
         <>
           <img src={`/${project.projet.img}`} alt={project.projet.img} />
@@ -40,6 +51,7 @@ export default function ProjectDetail() {
                 {project.projet.title}{" "}
                 <span className="client">( {project.projet.client} )</span>
               </h1>
+              <button alt="play" type="button" onClick={startOrPause} />
               <p>
                 Pourquoi: <br />
               </p>
@@ -83,6 +95,7 @@ export default function ProjectDetail() {
               </p>
               <section className="listen">
                 <p>Ecoute le projet :</p>
+                <button alt="play" type="button" onClick={startOrPause} />
               </section>{" "}
               <Link to="/utilisateurs">Tu recherche un collaborateur ?</Link>
             </article>
