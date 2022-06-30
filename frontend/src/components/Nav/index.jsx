@@ -9,8 +9,10 @@ export default function Nav() {
         Précedent
       </button>
       <button type="button">
-        {" "}
         <Link to="/accueil">Machine à Projet</Link>
+      </button>{" "}
+      <button type="button">
+        <Link to="/utilisateurs">Cherchez un collaborateur</Link>{" "}
       </button>
     </SNav>
   );
