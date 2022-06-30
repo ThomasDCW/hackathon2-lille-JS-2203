@@ -27,5 +27,6 @@ router.get("/projectresults", ProjectResultController.browse);
 router.get("/categories", CategoryController.browse);
 router.get("/projectsteps", ProjectLifeController.browse);
 router.get("/users/:id", UserController.read);
+router.get("/users", UserController.browse);
 
 module.exports = router;
