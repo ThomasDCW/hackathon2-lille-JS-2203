@@ -16,6 +16,18 @@ class UserController {
         res.sendStatus(500);
       });
   };
+
+  static browse = (req, res) => {
+    models.user
+      .findAllInfo()
+      .then(([rows]) => {
+        res.send(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
 }
 
 module.exports = UserController;
