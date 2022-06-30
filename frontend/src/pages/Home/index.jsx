@@ -84,7 +84,7 @@ export default function Home() {
             OK?
           </button>
 
-          <Link to={`/projets?${querySent}`}>
+          <Link to={`/projets?tags=${querySent}`}>
             <button
               type="button"
               className={`button ${active ? "link-off" : ""} `}
