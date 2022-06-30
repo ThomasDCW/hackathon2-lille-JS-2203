@@ -1,19 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import SProjectDetail from "./style";
 
 export default function ProjectDetail() {
   const [project, setProject] = useState([]);
+
   const { id } = useParams();
   useEffect(() => {
     axios.get(`http://localhost:5000/projects/${id}`).then(({ data }) => {
       setProject(data);
     });
   }, []);
+
   return (
     <SProjectDetail>
-      <img src={project.img} alt="" />
+      <img src={`/${project.img}`} alt={project.img} />
       <div className="articleContainer">
         <article>
           <div className="containDateStep">

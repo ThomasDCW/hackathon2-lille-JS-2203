@@ -182,7 +182,7 @@ CREATE TABLE `projectLife` (
 
 LOCK TABLES `projectLife` WRITE;
 /*!40000 ALTER TABLE `projectLife` DISABLE KEYS */;
-INSERT INTO `projectLife` VALUES (1,'idée'),(2,'cadrage'),(3,'réalisation'),(4,'clôture');
+INSERT INTO `projectLife` VALUES (1,'Idée'),(2,'Cadrage'),(3,'Réalisation'),(4,'Clôture');
 /*!40000 ALTER TABLE `projectLife` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +195,7 @@ DROP TABLE IF EXISTS `skill`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `skill` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL,
+  `name` varchar(256) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -304,4 +304,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-30 13:47:05
+-- Dump completed on 2022-06-30 16:02:26
