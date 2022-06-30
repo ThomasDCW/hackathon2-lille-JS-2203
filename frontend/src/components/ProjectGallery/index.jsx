@@ -16,12 +16,13 @@ export default function ProjectGallery() {
         setProjects(data);
       });
   }, []);
+
   return (
     <SProjectGallery>
       {projects.map((project) => {
         return (
           <ProjectCard
-            key={project.id}
+            id={project.id}
             img={project.img}
             title={project.title}
             client={project.client}

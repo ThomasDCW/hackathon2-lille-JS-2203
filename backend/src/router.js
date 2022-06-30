@@ -20,6 +20,8 @@ router.delete("/items/:id", ItemController.delete);
 
 router.get("/skills", SkillController.browse);
 router.get("/projects", ProjectController.browse);
+router.get("/projects/:id", ProjectController.read);
+
 router.post("/projects", ProjectController.add);
 router.get("/projectresults", ProjectResultController.browse);
 router.get("/categories", CategoryController.browse);
