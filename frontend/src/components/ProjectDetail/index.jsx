@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import playImg from "@assets/img/play-solid.svg";
-import pauseImg from "@assets/img/pause-icon.svg";
+import pauseImg from "@assets/img/pause-solid.svg";
 import SProjectDetail from "./style";
 
 export default function ProjectDetail() {

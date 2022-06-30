@@ -53,8 +53,8 @@ export default styled.div`
   }
   button {
     color: red;
-    width: 5vw;
-    height: 5vh;
+    width: 10vw;
+    height: 10vh;
     background: no-repeat url(${(props) => props.img});
     background-size: contain;
     border: none;
