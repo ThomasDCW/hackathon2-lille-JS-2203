@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Poppins&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
   --color-orange: rgb(232, 151, 89);
   --color-light-grey: rgb(240,240,240)
@@ -17,10 +17,10 @@ export default styled.div`
   /*Déclaration de l'arriere plan general*/
   margin: 0;
 
-  font: 1.5rem "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   h1 {
     font-size: 1.8rem;
   }
