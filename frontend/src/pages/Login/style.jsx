@@ -21,4 +21,15 @@ export default styled.div`
       font-weight: bold;
     }
   }
+  @media screen and (max-width: 600px) {
+    .loginContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .loginPicture {
+        width: 70vw;
+        height: 40vh;
+      }
+    }
+  }
 `;

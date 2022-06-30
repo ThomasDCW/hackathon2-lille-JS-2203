@@ -32,7 +32,7 @@ export default function ProjectGallery() {
             creatorFN={project.creatorFirstname}
             creatorPosition={project.creatorPosition}
             creatorAgency={project.creatorAgency}
-            step={project.step}
+            step={project.name}
           />
         );
       })}

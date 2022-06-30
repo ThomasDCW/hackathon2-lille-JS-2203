@@ -165,6 +165,77 @@ export default styled.div`
       border: 1px solid red;
     }
   }
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    .contain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      main {
+        margin: 1rem 0 0 0;
+        height: 70vh;
+        width: 80vw;
+        .jetonCateg {
+          background-color: var(--color-blue);
+          /* border: 5px solid #e89759; */
+          border-radius: 10px;
+          margin: 0.8rem;
+          padding: 0.9rem;
+          color: white;
+          width: 7.5rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 1.1rem;
+        }
+        .jetonSkill {
+          background-color: #5abdb2;
+          /* border: 5px solid var(--color-blue); */
+          border-radius: 10px;
+          margin: 0.8rem;
+          padding: 0.9rem;
+          color: white;
+          width: 7.5rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 1.1rem;
+        }
+        .jetonStep {
+          background-color: #e89759;
+          /* border: 5px solid #5abdb2; */
+          border-radius: 10px;
+          margin: 0.8rem;
+          padding: 0.9rem;
+          color: white;
+          width: 7.5rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-size: 1.1rem;
+        }
+      }
+      .containButton {
+        width: 86vw;
+        height: 40vh;
+        .buttonResults {
+          .button {
+            margin: 1rem 0;
+          }
+        }
+        p {
+          span {
+            padding: 0 7rem;
+          }
+        }
+      }
+    }
 
   .conteneur {
     display: flex;
