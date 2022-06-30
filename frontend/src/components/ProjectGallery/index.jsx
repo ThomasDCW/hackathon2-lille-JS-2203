@@ -16,12 +16,13 @@ export default function ProjectGallery() {
         setProjects(data);
       });
   }, []);
+
   return (
     <SProjectGallery>
       {projects.map((project) => {
         return (
           <ProjectCard
-            key={project.id}
+            id={project.id}
             img={project.img}
             title={project.title}
             client={project.client}
@@ -31,7 +32,7 @@ export default function ProjectGallery() {
             creatorFN={project.creatorFirstname}
             creatorPosition={project.creatorPosition}
             creatorAgency={project.creatorAgency}
-            step={project.step}
+            step={project.name}
           />
         );
       })}

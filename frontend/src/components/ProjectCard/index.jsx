@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import SProjectCard from "./style";
 
 export default function ProjectCard({
+  id,
   img,
   title,
   client,
@@ -40,12 +42,16 @@ export default function ProjectCard({
             au poste de <span className="spanCreator">{creatorPosition}</span>{" "}
             de l'agence de <span className="spanCreator">{creatorAgency}</span>.
           </p>
+          <div>
+            <Link to={`/projets/${id}`}>Details du projet</Link>
+          </div>
         </article>
       </div>
     </SProjectCard>
   );
 }
 ProjectCard.propTypes = {
+  id: propTypes.string.isRequired,
   creationDate: propTypes.string.isRequired,
   img: propTypes.string.isRequired,
   title: propTypes.string.isRequired,

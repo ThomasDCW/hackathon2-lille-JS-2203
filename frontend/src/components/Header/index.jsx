@@ -1,13 +1,17 @@
 import logo from "@assets/logo/logo.png";
-import profilPerso from "@assets/profil.jpg";
+import profil from "@assets/user/user.png";
+import Avatar from "@mui/material/Avatar";
 import SHeader from "./style";
 
 export default function Header() {
   return (
     <SHeader>
       <img className="logo" src={logo} alt="apsdidLogo" />
-      <h1>Machine à projet</h1>
-      <img className="profil" src={profilPerso} alt="profil perso" />
+      <Avatar
+        alt="Remy Sharp"
+        src={profil}
+        sx={{ width: 60, height: 60, margin: 1 }}
+      />
     </SHeader>
   );
 }
