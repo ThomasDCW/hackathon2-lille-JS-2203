@@ -64,10 +64,53 @@ export default styled.div`
       text-align: center;
       font-size: 1.1rem;
     }
+    .jeton {
+      fill: #fff;
+      transition: fill 0.3s;
+    }
   }
-  .selected {
-    border: 5px solid var(--color-button);
-    opacity: 50%;
+
+  .jetonSkill.selected {
+    opacity: 70%;
+    background-color: white;
+    color: #5abdb2;
+    border: 7px solid var(--color-blue);
+  }
+  .jetonSkill:hover {
+    opacity: 70%;
+    background-color: white;
+    color: #5abdb2;
+    border: 7px solid var(--color-blue);
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+  }
+  .jetonStep.selected {
+    opacity: 70%;
+    background-color: white;
+    color: #e89759;
+    border: 10px solid #5abdb2;
+  }
+  .jetonStep:hover {
+    opacity: 70%;
+    background-color: white;
+    color: #e89759;
+    border: 10px solid #5abdb2;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+  }
+  .jetonCateg.selected {
+    opacity: 70%;
+    background-color: white;
+    border: 5px solid #e89759;
+    color: var(--color-blue);
+  }
+  .jetonCateg:hover {
+    opacity: 70%;
+    background-color: white;
+    border: 5px solid #e89759;
+    color: var(--color-blue);
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
   }
   .link-off {
     display: none;

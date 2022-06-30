@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export default styled.section`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 80vw;
   border-radius: 8px;
   display: flex;
