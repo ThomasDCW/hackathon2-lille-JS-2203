@@ -3,6 +3,7 @@ import propTypes from "prop-types";
 import SProjectCard from "./style";
 
 export default function ProjectCard({
+  id,
   img,
   title,
   client,
@@ -42,7 +43,7 @@ export default function ProjectCard({
             de l'agence de <span className="spanCreator">{creatorAgency}</span>.
           </p>
           <div>
-            <Link to="/">Details du projet</Link>
+            <Link to={`/projets/${id}`}>Details du projet</Link>
           </div>
         </article>
       </div>
@@ -50,6 +51,7 @@ export default function ProjectCard({
   );
 }
 ProjectCard.propTypes = {
+  id: propTypes.string.isRequired,
   creationDate: propTypes.string.isRequired,
   img: propTypes.string.isRequired,
   title: propTypes.string.isRequired,

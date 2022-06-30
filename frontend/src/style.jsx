@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-  --color-orange: rgb(232, 151, 89);
+  --color-orange: #e89759;
   --color-light-grey: rgb(240,240,240)
   --color-dark-grey: #18365088;
   --color-blue: rgb(24, 54, 80);
