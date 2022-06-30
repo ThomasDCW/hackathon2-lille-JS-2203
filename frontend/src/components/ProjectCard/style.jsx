@@ -30,15 +30,14 @@ export default styled.section`
       }
       h1 {
         padding: 1em;
-        font-size: 1.6em;
+        font-size: 2.6em;
         font-weight: bold;
         span {
-          font-size: 0.6em;
           font-weight: lighter;
         }
       }
       p {
-        font-size: 1em;
+        font-size: 2em;
       }
       .creator {
         color: #e89759;
@@ -46,7 +45,7 @@ export default styled.section`
 
         .spanCreator {
           color: #e77620;
-          font-size: 1.4rem;
+          font-size: 2rem;
         }
       }
     }
@@ -64,6 +63,7 @@ export default styled.section`
       color: #183650;
       background: white;
       border-radius: 3px;
+      font-size: 2em;
     }
     a:hover {
       transition: 0.6s;
