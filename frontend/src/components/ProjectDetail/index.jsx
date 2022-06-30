@@ -1,13 +1,16 @@
-import AllProjects from "@pages/AllProjects";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import playImg from "@assets/img/play-solid.svg";
+import pauseImg from "@assets/img/pause-solid.svg";
 import SProjectDetail from "./style";
 
 export default function ProjectDetail() {
   const [project, setProject] = useState([]);
+  const [audio, setAudio] = useState(null);
+  const [playOn, setPlayOn] = useState(false);
+  const [playOrPauseImg, setPlayOrPauseImg] = useState(playImg);
   const [creatorProject, setCreatorProject] = useState([]);
-
   const { id } = useParams();
   useEffect(() => {
     axios.get(`http://localhost:5000/projects/${id}`).then(({ data }) => {
