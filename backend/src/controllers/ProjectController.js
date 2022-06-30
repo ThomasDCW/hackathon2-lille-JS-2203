@@ -3,34 +3,30 @@ const models = require("../models");
 class ProjectController {
   static read = (req, res) => {
     const newId = req.params.id;
-    const data = [];
+    const data = {};
     models.project.findProject(newId).then(([rows]) => {
       if (rows[0] == null) {
         res.sendStatus(404);
       } else {
-        data.push(rows[0]);
+        data.projet = rows.shift();
       }
     });
     models.project.findProjectSkills(newId).then(([rows]) => {
-      if (rows[0] == null) {
-        res.sendStatus(404);
-      } else {
-        rows.forEach((row) => {
-          data.push(row);
-        });
-      }
+      const tempArr = [];
+      rows.forEach((row) => {
+        tempArr.push(row);
+      });
+      data.skills = tempArr;
     });
     models.project
       .findProjectParticipants(newId)
       .then(([rows]) => {
-        if (rows[0] == null) {
-          res.sendStatus(404);
-        } else {
-          rows.forEach((row) => {
-            data.push(row);
-          });
-          res.send(data);
-        }
+        const tempArr = [];
+        rows.forEach((row) => {
+          tempArr.push(row);
+        });
+        data.participants = tempArr;
+        res.send(data);
       })
       .catch((err) => {
         console.error(err);
