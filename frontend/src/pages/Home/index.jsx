@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/skills`).then(({ data }) => {
+    axios.get(`http://localhost:5005/skills`).then(({ data }) => {
       setSkills(
         data
           .sort(() => {
@@ -47,10 +47,10 @@ export default function Home() {
           .slice(0, 10)
       );
     });
-    axios.get(`http://localhost:5000/categories`).then(({ data }) => {
+    axios.get(`http://localhost:5005/categories`).then(({ data }) => {
       setCategories(data);
     });
-    axios.get(`http://localhost:5000/projectsteps`).then(({ data }) => {
+    axios.get(`http://localhost:5005/projectsteps`).then(({ data }) => {
       setSteps(data);
     });
   }, []);
