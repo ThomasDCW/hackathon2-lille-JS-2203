@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <SNav>
       <Link to="/accueil">La Machine à Projet</Link>
-      <Link to="/projets">Consultez les projets</Link>{" "}
+      <Link to="/toutlesprojets">Consultez les projets</Link>{" "}
       <Link to="/utilisateurs">Cherchez un profil</Link>{" "}
     </SNav>
   );
