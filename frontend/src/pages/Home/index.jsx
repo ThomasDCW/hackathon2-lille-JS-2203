@@ -8,7 +8,10 @@ import SHome from "./style";
 export default function Home() {
   const [active, setActive] = useState(true);
   const [skills, setSkills] = useState([]);
+  const [steps, setSteps] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [allTokens, setAllTokens] = useState([]);
+
   // const [projectState, setProjectState] = useState([]);
   const [querySent, setQuerySent] = useState("");
   const [formData, setFormData] = useState({
@@ -36,38 +39,90 @@ export default function Home() {
 
   useEffect(() => {
     axios.get(`http://localhost:5000/skills`).then(({ data }) => {
-      setSkills(data);
+      setSkills(
+        data
+          .sort(() => {
+            return Math.random() - 0.5;
+          })
+          .slice(0, 10)
+      );
     });
     axios.get(`http://localhost:5000/categories`).then(({ data }) => {
       setCategories(data);
     });
+    axios.get(`http://localhost:5000/projectsteps`).then(({ data }) => {
+      setSteps(data);
+    });
   }, []);
+
+  useEffect(() => {
+    if (!skills.length) return;
+    if (!categories.length) return;
+    if (!steps.length) return;
+
+    setAllTokens(
+      [...skills, ...categories, ...steps].sort(() => {
+        return Math.random() - 0.5;
+      })
+    );
+  }, [skills, categories, steps]);
 
   return (
     <SHome>
       <Header />
       <main>
         <div className="list">
-          {skills.map((skill) => {
+          {allTokens.map((allToken) => {
+            if (
+              allToken.name === "Banque" ||
+              allToken.name === "Santé" ||
+              allToken.name === "Environnement" ||
+              allToken.name === "Industrie" ||
+              allToken.name === "Agro-alimentaire" ||
+              allToken.name === "Grande distribution" ||
+              allToken.name === "Commerce" ||
+              allToken.name === "E-commerce" ||
+              allToken.name === "Culture" ||
+              allToken.name === "Education" ||
+              allToken.name === "Agriculture"
+            ) {
+              return (
+                <input
+                  type="text"
+                  name={allToken.name}
+                  className="jetonCateg"
+                  value={allToken.name}
+                  onClick={(event) => {
+                    handleChoiceLinks(event);
+                  }}
+                />
+              );
+            }
+            if (
+              allToken.name === "idée" ||
+              allToken.name === "cadrage" ||
+              allToken.name === "réalisation" ||
+              allToken.name === "clôture"
+            ) {
+              return (
+                <input
+                  type="text"
+                  name={allToken.name}
+                  className="jetonStep"
+                  value={allToken.name}
+                  onClick={(event) => {
+                    handleChoiceLinks(event);
+                  }}
+                />
+              );
+            }
+
             return (
               <input
                 type="text"
-                name={skill.name}
-                className="jeton"
-                value={skill.name}
-                onClick={(event) => {
-                  handleChoiceLinks(event);
-                }}
-              />
-            );
-          })}
-          {categories.map((categorie) => {
-            return (
-              <input
-                type="text"
-                name={categorie.name}
-                className="jeton"
-                value={categorie.name}
+                name={allToken.name}
+                className="jetonSkill"
+                value={allToken.name}
                 onClick={(event) => {
                   handleChoiceLinks(event);
                 }}
