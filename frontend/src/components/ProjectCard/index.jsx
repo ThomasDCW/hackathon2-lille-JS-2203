@@ -26,7 +26,7 @@ export default function ProjectCard({
               {creationDate}
             </div>
             <div>
-              <span className="stepDate">Status du projet : </span>
+              <span className="stepDate">Statut du projet : </span>
               {step}
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function ProjectCard({
             de l'agence de <span className="spanCreator">{creatorAgency}</span>.
           </p>
           <div>
-            <Link to={`/projets/${id}`}>Details du projet</Link>
+            <Link to={`/projets/${id}`}>Détails du projet</Link>
           </div>
         </article>
       </div>
