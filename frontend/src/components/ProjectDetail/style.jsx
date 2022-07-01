@@ -73,6 +73,7 @@ export default styled.div`
     }
     .link {
       margin-top: 1em;
+      margin-bottom: 4vh;
       display: flex;
       justify-content: center;
       a {
