@@ -41,7 +41,7 @@ export default function SearchUser() {
               <div className="userCard">
                 <img className="picture" src={picture} />
                 <h1>
-                  {user.firstname}, {user.lastname}
+                  {user.firstname} {user.lastname}
                 </h1>
                 <h2>de {user.agency}</h2>
                 <h3>

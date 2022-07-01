@@ -12,6 +12,12 @@ export default styled.form`
   margin-right: auto;
   margin-left: auto;
 
+  #audio {
+    border: 1px solid #183650;
+    height: 7vh;
+    width: 50%;
+    margin: auto;
+  }
   .bouton {
     width: 50%;
     text-align: center;
@@ -50,5 +56,10 @@ export default styled.form`
     font-size: 0.9em;
     margin: 1em;
     background-color: transparent;
+  }
+  #texte {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
   }
 `;

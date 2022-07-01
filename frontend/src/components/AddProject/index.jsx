@@ -64,7 +64,7 @@ export default function AddProject() {
             onChange={hChange}
           />
           <select name="projectLife_id" onChange={hChange}>
-            <option value>-- Stade du projet --</option>
+            <option value>-- Statut du projet --</option>
             {projectSteps.map((project) => (
               <option value={project.id} key={project.id}>
                 {project.name}
@@ -79,11 +79,10 @@ export default function AddProject() {
               </option>
             ))}
           </select>
-          <input
-            type="submit"
-            className="bouton"
-            value="Créer un nouveau projet"
-          />
+          <div id="audio">
+            <p id="texte">Déposez votre présentation ici</p>
+          </div>
+          <input type="submit" className="bouton" value="C'est parti" />
         </>
       ) : null}
     </SAddProject>
