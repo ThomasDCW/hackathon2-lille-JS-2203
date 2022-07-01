@@ -43,7 +43,7 @@ export default function ProjectDetail() {
                   {creatorProject}
                 </div>
                 <div>
-                  <span className="stepDate">Status du projet : </span>
+                  <span className="stepDate">Statut du projet : </span>
                   {project.projet.name}
                 </div>
               </div>
@@ -51,53 +51,60 @@ export default function ProjectDetail() {
                 {project.projet.title}{" "}
                 <span className="client">( {project.projet.client} )</span>
               </h1>
+              <h2>Je parle du projet :</h2>
               <button alt="play" type="button" onClick={startOrPause} />
-              <p>
-                Pourquoi: <br />
-              </p>
+              <h2>Les motivations :</h2>
               <p className="descProject">{project.projet.description}</p>
-              <p>Comment :</p>
-              <p>
-                Skills nécessaire :<br />
+              <h2>Les moyens mis en oeuvre : </h2>
+              <h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                dolorem rerum quas a ex quos adipisci odit cum fuga maiores, eos
+                modi esse ipsam laborum dolore laboriosam molestiae voluptas
+                fugiat.
+              </h4>
+              <h2>
+                Les skills appréciés:
+                <br />
                 {project.skills.map((skill) => {
-                  return <div>{skill.name}</div>;
-                })}
-              </p>
-              <p className="descProject">{project.projet.nsp}</p>
-              <p>
-                Par qui :<br />
-                {project.participants.map((participant) => {
                   return (
                     <div>
-                      {participant.firstname}
-                      {participant.lastname}
+                      <h3>{skill.name}</h3>
                     </div>
                   );
                 })}
-              </p>
+              </h2>
+              <p className="descProject">{project.projet.nsp}</p>
               <p className="creator">
                 Projet créé par{" "}
                 <span className="spanCreator">
-                  {project.projet.creatorFirstname}{" "}
+                  {project.projet.creatorFirstname}
                   {project.projet.creatorLastname}
-                </span>{" "}
-                au poste de{" "}
+                </span>
+                au poste de
                 <span className="spanCreator">
                   {project.projet.creatorPosition}
-                </span>{" "}
-                de l'agence de{" "}
+                </span>
+                de l'agence de
                 <span className="spanCreator">
                   {project.projet.creatorAgency}
                 </span>
                 .
-                <br /> Avec la Participation de :{" "}
-                <span className="spanCreator">{project.projet.nup}</span>
+                <br /> <h2>Avec la Participation de :</h2>
+                <p>
+                  <br />
+                  {project.participants.map((participant) => {
+                    return (
+                      <h3>
+                        {participant.firstname}
+                        {participant.lastname}
+                      </h3>
+                    );
+                  })}
+                </p>
               </p>
-              <section className="listen">
-                <p>Ecoute le projet :</p>
-                <button alt="play" type="button" onClick={startOrPause} />
-              </section>{" "}
-              <Link to="/utilisateurs">Tu recherche un collaborateur ?</Link>
+              <div className="link">
+                <Link to="/utilisateurs">Tu recherche un collaborateur ?</Link>
+              </div>
             </article>
           </div>{" "}
         </>
