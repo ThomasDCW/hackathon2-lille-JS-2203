@@ -66,7 +66,6 @@ export default styled.div`
     }
     .jeton {
       fill: #fff;
-      transition: fill 0.3s;
     }
   }
 
@@ -74,28 +73,30 @@ export default styled.div`
     opacity: 70%;
     background-color: white;
     color: #5abdb2;
-    border: 7px solid var(--color-blue);
+    border: 5px solid var(--color-blue);
   }
   .jetonSkill:hover {
+    transform: scale(1.1);
     opacity: 70%;
     background-color: white;
     color: #5abdb2;
-    border: 7px solid var(--color-blue);
+    border: 5px solid var(--color-blue);
     transition: all 0.2s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+
     cursor: pointer;
   }
   .jetonStep.selected {
     opacity: 70%;
     background-color: white;
     color: #e89759;
-    border: 10px solid #5abdb2;
+    border: 5px solid #5abdb2;
   }
   .jetonStep:hover {
+    transform: scale(1.1);
     opacity: 70%;
     background-color: white;
     color: #e89759;
-    border: 10px solid #5abdb2;
+    border: 5px solid #5abdb2;
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -107,6 +108,7 @@ export default styled.div`
     color: var(--color-blue);
   }
   .jetonCateg:hover {
+    transform: scale(1.1);
     opacity: 70%;
     background-color: white;
     border: 5px solid #e89759;
