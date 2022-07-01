@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import SAddProject from "./style";
 
 export default function AddProject() {
@@ -34,7 +35,21 @@ export default function AddProject() {
     axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/projects`, formData)
       .then(() => {
-        return <div className="success">Votre projet a été créé</div>;
+        toast.success(
+          "Félicitations, vous avez alimenté la machine à projets!",
+          {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
+      })
+      .catch(() => {
+        toast.error("Oups, réessayez!");
       });
   };
 
