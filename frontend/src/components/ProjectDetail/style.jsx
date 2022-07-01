@@ -1,75 +1,95 @@
 import styled from "styled-components";
 
 export default styled.div`
-  padding: 2em;
-  border: 2px solid #183650;
+  margin-top: 8vh;
   display: flex;
-  width: 90vw;
-  margin: auto;
-  height: 100vh;
-  .containDateStep {
-    width: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
   img {
-    height: 250px;
-    width: 250px;
+    margin-left: 2vw;
+    width: 300px;
+    height: 200px;
   }
-  h1 {
-    padding: 0.2em;
-    font-size: 4em;
-    font-weight: bold;
-    border-bottom: 5px solid #5abdb2;
-    span {
-      font-size: 0.6em;
-      font-weight: lighter;
-    }
-  }
-  p {
-    font-size: 2em;
-    margin: 2rem 0;
-  }
-  .descProject {
-    font-size: 1.2rem;
-  }
-  .creator {
-    color: #e89759;
-    font-size: 1.2rem;
+  .articleContainer {
+    margin-left: 1em;
+    width: 100%;
 
-    .spanCreator {
-      color: #e77620;
-      font-size: 1.4rem;
-    }
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    a {
-      width: 50%;
-      text-decoration: none;
-      text-align: center;
-      padding: 1em;
-      border: 2px solid #183650;
+    article {
+      margin: 1.6em;
+      border-radius: 20px;
       color: #183650;
-      background: white;
-      border-radius: 3px;
+      .containDateStep {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -4rem;
+        .stepDate {
+          font-size: 1.2rem;
+        }
+      }
+      h1 {
+        padding: 1em;
+        font-size: 1.4em;
+        font-weight: bold;
+        border-bottom: 2px #5abdb2 solid;
+        span {
+          font-weight: lighter;
+        }
+      }
+      button {
+        margin-top: 2em;
+        margin-left: 4vw;
+        margin-bottom: 2em;
+        background: no-repeat url(${(props) => props.img});
+        background-size: 100%;
+        background-position: center;
+        border: none;
+        border-radius: 8px;
+        padding: 1.6em;
+        //Here we use props with  styledComponent, coming from the component <SAudioPlayerControll img={playOrPauseImg}>
+      }
+      h2 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 0em;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .creator {
+        color: #183650;
+        font-size: 1rem;
+
+        .spanCreator {
+          color: #183650;
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+      }
+      h3 {
+        padding: 1em;
+        color: #e77620;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      margin-bottom: 2vh;
     }
-    a:hover {
-      transition: 0.6s;
-      color: white;
-      background: #183650;
+    .link {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      a {
+        width: 40%;
+        text-decoration: none;
+        text-align: center;
+        padding: 1em;
+        border: 2px solid #183650;
+        color: #183650;
+        background: white;
+        border-radius: 3px;
+      }
+      a:hover {
+        transition: 0.6s;
+        color: white;
+        background: #183650;
+      }
     }
-  }
-  button {
-    color: red;
-    width: 10vw;
-    height: 10vh;
-    background: no-repeat url(${(props) => props.img});
-    background-size: contain;
-    border: none;
-    //Here we use props with  styledComponent, coming from the component <SAudioPlayerControll img={playOrPauseImg}>
   }
 `;
