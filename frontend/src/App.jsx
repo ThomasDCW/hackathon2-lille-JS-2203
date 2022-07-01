@@ -7,6 +7,7 @@ import NewProject from "@pages/NewProject";
 import SearchUser from "@pages/SearchUser";
 import ProjectDetailPage from "@pages/ProjectDetailPage";
 import AllProjects from "@pages/AllProjects";
+import Footer from "@components/Footer";
 import SGlobal from "./style";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/projets/:id" element={<ProjectDetailPage />} />
         <Route path="/touslesprojets" element={<AllProjects />} />
       </Routes>
+      <Footer />
     </SGlobal>
   );
 }
