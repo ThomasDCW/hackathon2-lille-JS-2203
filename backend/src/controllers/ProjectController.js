@@ -2,14 +2,31 @@ const models = require("../models");
 
 class ProjectController {
   static read = (req, res) => {
+    const newId = req.params.id;
+    const data = {};
+    models.project.findProject(newId).then(([rows]) => {
+      if (rows[0] == null) {
+        res.sendStatus(404);
+      } else {
+        data.projet = rows.shift();
+      }
+    });
+    models.project.findProjectSkills(newId).then(([rows]) => {
+      const tempArr = [];
+      rows.forEach((row) => {
+        tempArr.push(row);
+      });
+      data.skills = tempArr;
+    });
     models.project
-      .findProject(req.params.id)
+      .findProjectParticipants(newId)
       .then(([rows]) => {
-        if (rows[0] == null) {
-          res.sendStatus(404);
-        } else {
-          res.send(rows[0]);
-        }
+        const tempArr = [];
+        rows.forEach((row) => {
+          tempArr.push(row);
+        });
+        data.participants = tempArr;
+        res.send(data);
       })
       .catch((err) => {
         console.error(err);
