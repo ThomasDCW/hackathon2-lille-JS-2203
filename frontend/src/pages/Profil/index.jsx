@@ -3,6 +3,7 @@ import imgLoca from "@assets/login/localisateur.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Label from "@components/Label";
+import Nav from "@components/Nav";
 import SProfil from "./style";
 
 export default function Profil() {
@@ -18,6 +19,7 @@ export default function Profil() {
   return (
     <SProfil>
       <Header />
+      <Nav />
       <section className="main">
         <div className="imgPosition">
           <img
