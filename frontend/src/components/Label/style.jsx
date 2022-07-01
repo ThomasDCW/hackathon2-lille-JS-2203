@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default styled.div`
   height: 23%;
   width: 31%;
-  background-color: #e9cda0;
+  background-color: rgb(232, 151, 89);
   display: flex;
   justify-content: center;
   text-align: center;

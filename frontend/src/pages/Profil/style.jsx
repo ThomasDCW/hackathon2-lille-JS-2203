@@ -16,11 +16,11 @@ export default styled.div`
         margin-top: 2%;
         width: 25%;
         border-radius: 50%;
-        border: solid 0.2em #18365088;
+        border: solid 0.2em rgb(232, 151, 89);
       }
     }
     .line {
-      background-color: #18365088;
+      background-color: rgb(232, 151, 89);
       width: 79%;
       height: 0.2em;
       margin: auto;
