@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Label from "@components/Label";
 import Nav from "@components/Nav";
+import profil from "@assets/user/user.png";
 import SProfil from "./style";
 
 export default function Profil() {
@@ -23,10 +24,7 @@ export default function Profil() {
       <Nav />
       <section className="main">
         <div className="imgPosition">
-          <img
-            alt="imgProfile"
-            src="https://media-exp1.licdn.com/dms/image/C5603AQHsHSjF0Ym8Lg/profile-displayphoto-shrink_800_800/0/1646850641131?e=1661990400&v=beta&t=lDoSfc8cvNOuvv66WV1gGWYxamMD3gdvHWoH7bT9xP4"
-          />
+          <img alt="imgProfile" src={profil} />
         </div>
         <div className="line"> </div>
         <section className="infoP">
